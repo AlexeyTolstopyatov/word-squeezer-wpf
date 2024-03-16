@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HandyControl" Version="3.5.0" />
+    <PackageReference Include="HandyControl.Lang.ru" Version="3.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Compression">
+      <HintPath>..\Compression\bin\Release\Compression.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
