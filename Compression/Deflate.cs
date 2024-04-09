@@ -20,6 +20,22 @@ namespace Compression
         { 
         }
 
+        public static string FastCompress(string text)
+        {
+            Deflate deflate = new Deflate();
+            deflate.Text = text;
+            deflate.Compress();
+            
+            return deflate.Result;
+        }
+
+        public static string FastDecompress(string bytes)
+        {
+            Deflate deflate = new Deflate(bytes);
+            deflate.Decompress();
+            return deflate.Result;
+        }
+        
         public void Compress()
         {
             byte[] buffer = Encoding.UTF8.GetBytes(_text);
